@@ -10,9 +10,7 @@ App Android para explorar un catálogo de vehículos por marca, ver la ficha de 
 
 ## 📖 Sobre el proyecto
 
-MyCar es un proyecto personal de app Android (Java, sin arquitectura MVVM) que simula el flujo de alquiler de un auto: elegir una marca, recorrer su catálogo de vehículos, ver el detalle de cada uno con fotos y ficha técnica, completar un formulario de alquiler con validaciones y guardar la reserva confirmada en una base de datos local (SQLite) para poder consultarla después.
-
-Nació en el marco de un proyecto para una materia universitaria, y se mantiene como pieza de portfolio para practicar desarrollo Android nativo: Activities, Intents, adapters personalizados para `ListView`/`GridView`/`ViewPager`, validación de formularios y persistencia local con `SQLiteOpenHelper`.
+MyCar es un proyecto personal de app Android que simula el flujo de alquiler de un auto: elegir una marca, recorrer su catálogo de vehículos, ver el detalle de cada uno con fotos y ficha técnica, completar un formulario de alquiler con validaciones y guardar la reserva confirmada en una base de datos local (SQLite) para poder consultarla después. Este proyecto nació en el marco de un proyecto para una materia universitaria
 
 ## ✨ Funcionalidades
 
@@ -95,6 +93,4 @@ Este es un proyecto de aprendizaje/portfolio, no una app de alquiler de autos en
 - No hay migraciones de base de datos (`onUpgrade` está vacío).
 - No hay tests automatizados escritos todavía, solo la configuración por defecto de Android Studio (JUnit/Espresso).
 
-## 👤 Autor
 
-Proyecto desarrollado por [Ismael-es](https://github.com/Ismael-es).
