@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#FFFFFF"
+        android:elevation="4dp"
+        android:padding="8dp">
+
+
+
+        <TextView
+            android:id="@+id/tvTituloVehiculos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="#1A1A1A"
+            android:text="Vehículos"/>
+
+
+
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/gridViewVehiculos"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:columnWidth="130dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:horizontalSpacing="4dp"
+        android:numColumns="auto_fit"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="4dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="8dp">
+
+        <Button
+            android:id="@+id/btn_volver_galeria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="← Volver"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#0081d1" />
+
+        <Button
+            android:id="@+id/btn_ir_inicio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:layout_weight="1"
+            android:backgroundTint="#0081d1"
+            android:text="Ir al inicio"
+            android:textColor="#FFFFFF" />
+
+
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

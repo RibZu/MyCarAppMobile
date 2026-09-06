@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:gravity="center"
+    android:padding="32dp"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/vehicle"
+        android:layout_marginBottom="12dp"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MyCar"
+        android:textColor="#013124"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.1"
+        android:gravity="center"
+        android:layout_gravity="center"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alquiler de Vehículos"
+        android:textColor="#026248"
+        android:textSize="14sp"
+        android:layout_marginTop="30dp"
+        android:letterSpacing="0.3"
+        android:textAllCaps="true"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginBottom="56dp"/>
+
+
+    <View
+        android:layout_width="48dp"
+        android:layout_height="3dp"
+        android:background="#2C3E50"
+        android:layout_gravity="center"
+        android:layout_marginBottom="48dp"/>
+
+   
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnInformacion"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:text="Información"
+        style="@style/Widget.Material3.Button"
+        app:cornerRadius="15dp"
+        app:icon="@drawable/info"
+        app:iconTint="@null"
+        app:backgroundTint="#85CAF4"
+        app:iconGravity="textStart"
+        app:iconSize="25dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:letterSpacing="0.20"
+        android:layout_marginBottom="16dp"/>
+
+    
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLista"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:text="Lista de vehiculos"
+        style="@style/Widget.Material3.Button"
+        app:cornerRadius="15dp"
+        app:icon="@drawable/car"
+        app:iconTint="@null"
+        app:backgroundTint="#85CAF4"
+        app:iconGravity="textStart"
+        app:iconSize="25dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:letterSpacing="0.20"
+        android:layout_marginBottom="16dp"/>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAlquiler"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:text="Lista de alquileres"
+        style="@style/Widget.Material3.Button"
+        app:cornerRadius="15dp"
+        app:icon="@drawable/deal"
+        app:iconTint="@null"
+        app:backgroundTint="#85CAF4"
+        app:iconGravity="textStart"
+        app:iconSize="25dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:letterSpacing="0.20"
+        android:layout_marginBottom="16dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSalir"
+        android:layout_width="200dp"
+        android:layout_height="64dp"
+        android:text="Salir"
+        style="@style/Widget.Material3.Button"
+        app:cornerRadius="15dp"
+        app:icon="@drawable/logout"
+        app:iconTint="@null"
+        app:backgroundTint="#85CAF4"
+        app:iconGravity="textStart"
+        app:iconSize="25dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:letterSpacing="0.20"
+        android:layout_marginBottom="16dp"/>
+
+
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="© 2026 MyCar"
+        android:textColor="#444444"
+        android:textSize="11sp"
+        android:letterSpacing="0.2"
+        android:layout_marginTop="48dp"
+        android:gravity="center"
+        android:layout_gravity="center"/>
+
+</LinearLayout>

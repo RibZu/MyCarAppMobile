@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F2F2F2">
+
+
+    <ImageView
+        android:id="@+id/imgDetalle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scaleType="centerCrop"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#FFFFFF"
+        android:padding="20dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <Button
+                android:id="@+id/btn_alquilar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:text="Alquilar"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#0081d1"/>
+
+            <Button
+                android:id="@+id/btn_volver"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Volver atrás"
+                android:textColor="#1A1A1A"
+                android:backgroundTint="#E0E0E0"/>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tvNombreAuto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#1A1A1A"
+            android:layout_marginBottom="6dp"/>
+
+
+        <View
+            android:layout_width="48dp"
+            android:layout_height="3dp"
+            android:background="#0081d1"
+            android:layout_marginBottom="10dp"/>
+
+
+        <TextView
+            android:id="@+id/tvDescripcionAuto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#555555"
+            android:textSize="13sp"
+            android:lineSpacingExtra="5dp"/>
+
+
+        <Button
+            android:id="@+id/btn_ir_inicio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="VOLVER AL INICIO"
+            android:textColor="#1A1A1A"
+            android:backgroundTint="#E0E0E0"/>
+        <Button
+            android:id="@+id/btn_ir_categorias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="VOLVER A CATEGORIAS"
+            android:textColor="#1A1A1A"
+            android:backgroundTint="#E0E0E0"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>
