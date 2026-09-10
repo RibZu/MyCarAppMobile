@@ -43,6 +43,14 @@ app/src/main/java/com/proyectoapp/mycar/
 
 Los datos de los vehículos (nombres, precios, descripciones e imágenes) están hardcodeados en `DetalleActivity` y `VehiculosActivity`; no provienen de una API ni de una base remota.
 
+![Diagrama de arquitectura](docs/diagrams/architecture.png)
+
+## 🗄️ Base de datos
+
+Única tabla local (SQLite, vía `AdminSQLiteOpenHelper`): guarda el historial de alquileres confirmados. Los datos de los vehículos no están en la base — ver arriba.
+
+![Diagrama de base de datos](docs/diagrams/database.png)
+
 ## 🛠️ Stack técnico
 
 | Capa | Tecnología |
