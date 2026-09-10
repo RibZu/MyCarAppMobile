@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyCar · Base de datos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --color-paper:   #f5f5f5;
+      --color-ink:     #2d3142;
+      --color-muted:   #4f5d75;
+      --color-accent:  #eb6c36;
+      --font-sans:     'Geist', system-ui, sans-serif;
+      --font-serif:    'Instrument Serif', serif;
+      --font-mono:     'Geist Mono', ui-monospace, monospace;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--color-paper);
+      color: var(--color-ink);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 2rem;
+    }
+
+    .frame { max-width: 1200px; width: 100%; }
+
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.66rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-muted);
+      margin-bottom: 0.5rem;
+    }
+
+    h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.5rem, 2.4vw + 0.75rem, 2rem);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      color: var(--color-ink);
+      margin-bottom: 1.5rem;
+    }
+
+    svg { width: 100%; min-width: 900px; display: block; }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">Base de datos · MyCar (SQLite local)</p>
+    <h1>Tabla alquileres en la base local SQLite</h1>
+
+    <svg viewBox="0 0 960 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="db-title db-desc">
+      <title id="db-title">Esquema SQLite de la app MyCar</title>
+      <desc id="db-desc">Diagrama de base de datos que muestra la única tabla local de la app, alquileres, con sus siete columnas (id, nombre, apellido, forma_pago, dias, total, auto), tal como la define AdminSQLiteOpenHelper. No hay claves foráneas: los datos de vehículos están hardcodeados en la app, no en la base.</desc>
+
+      <rect width="100%" height="100%" fill="#f5f5f5"/>
+
+      <!-- Table: alquileres -->
+      <rect x="330" y="140" width="300" height="208" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+
+      <!-- Header band -->
+      <rect x="330" y="140" width="300" height="40" rx="6" fill="rgba(45,49,66,0.04)"/>
+      <rect x="330" y="168" width="300" height="12" fill="rgba(45,49,66,0.04)"/>
+      <line x1="330" y1="180" x2="630" y2="180" stroke="rgba(45,49,66,0.22)" stroke-width="1"/>
+      <rect x="346" y="150" width="42" height="14" rx="2" fill="transparent" stroke="rgba(45,49,66,0.30)" stroke-width="0.8"/>
+      <text x="367" y="160" fill="#4f5d75" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.08em">TABLE</text>
+      <text x="398" y="164" fill="#2d3142" font-size="14" font-weight="600" font-family="'Geist', sans-serif">alquileres</text>
+
+      <!-- Alternate row shading (rows 1,3,5 of 0-6) -->
+      <rect x="330" y="204" width="300" height="24" fill="rgba(45,49,66,0.02)"/>
+      <rect x="330" y="252" width="300" height="24" fill="rgba(45,49,66,0.02)"/>
+      <rect x="330" y="300" width="300" height="24" fill="rgba(45,49,66,0.02)"/>
+
+      <!-- Row separators -->
+      <line x1="330" y1="204" x2="630" y2="204" stroke="rgba(45,49,66,0.10)" stroke-width="0.6"/>
+      <line x1="330" y1="228" x2="630" y2="228" stroke="rgba(45,49,66,0.10)" stroke-width="0.6"/>
+      <line x1="330" y1="252" x2="630" y2="252" stroke="rgba(45,49,66,0.10)" stroke-width="0.6"/>
+      <line x1="330" y1="276" x2="630" y2="276" stroke="rgba(45,49,66,0.10)" stroke-width="0.6"/>
+      <line x1="330" y1="300" x2="630" y2="300" stroke="rgba(45,49,66,0.10)" stroke-width="0.6"/>
+      <line x1="330" y1="324" x2="630" y2="324" stroke="rgba(45,49,66,0.10)" stroke-width="0.6"/>
+
+      <!-- Row: id (PK) -->
+      <text x="346" y="196" fill="#2d3142" font-size="12" font-family="'Geist Mono', monospace">id</text>
+      <rect x="480" y="185" width="22" height="14" rx="2" fill="rgba(45,49,66,0.06)" stroke="rgba(45,49,66,0.30)" stroke-width="0.8"/>
+      <text x="491" y="195" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" font-weight="600">PK</text>
+      <text x="614" y="196" fill="#4f5d75" font-size="10" font-family="'Geist Mono', monospace" text-anchor="end">integer</text>
+
+      <!-- Row: nombre -->
+      <text x="346" y="220" fill="#2d3142" font-size="12" font-family="'Geist Mono', monospace">nombre</text>
+      <text x="614" y="220" fill="#4f5d75" font-size="10" font-family="'Geist Mono', monospace" text-anchor="end">text</text>
+
+      <!-- Row: apellido -->
+      <text x="346" y="244" fill="#2d3142" font-size="12" font-family="'Geist Mono', monospace">apellido</text>
+      <text x="614" y="244" fill="#4f5d75" font-size="10" font-family="'Geist Mono', monospace" text-anchor="end">text</text>
+
+      <!-- Row: forma_pago -->
+      <text x="346" y="268" fill="#2d3142" font-size="12" font-family="'Geist Mono', monospace">forma_pago</text>
+      <text x="614" y="268" fill="#4f5d75" font-size="10" font-family="'Geist Mono', monospace" text-anchor="end">text</text>
+
+      <!-- Row: dias -->
+      <text x="346" y="292" fill="#2d3142" font-size="12" font-family="'Geist Mono', monospace">dias</text>
+      <text x="614" y="292" fill="#4f5d75" font-size="10" font-family="'Geist Mono', monospace" text-anchor="end">integer</text>
+
+      <!-- Row: total -->
+      <text x="346" y="316" fill="#2d3142" font-size="12" font-family="'Geist Mono', monospace">total</text>
+      <text x="614" y="316" fill="#4f5d75" font-size="10" font-family="'Geist Mono', monospace" text-anchor="end">real</text>
+
+      <!-- Row: auto -->
+      <text x="346" y="340" fill="#2d3142" font-size="12" font-family="'Geist Mono', monospace">auto</text>
+      <text x="614" y="340" fill="#4f5d75" font-size="10" font-family="'Geist Mono', monospace" text-anchor="end">text</text>
+
+      <!-- Editorial aside: no FK, hardcoded vehicle data -->
+      <text x="480" y="392" fill="#4f5d75" font-size="12" font-style="italic" font-family="'Instrument Serif', serif" text-anchor="middle">Única tabla local — sin claves foráneas. Los datos de los vehículos</text>
+      <text x="480" y="410" fill="#4f5d75" font-size="12" font-style="italic" font-family="'Instrument Serif', serif" text-anchor="middle">están hardcodeados en la app, no viven en esta base.</text>
+
+      <!-- Legend -->
+      <line x1="40" y1="450" x2="920" y2="450" stroke="rgba(45,49,66,0.10)" stroke-width="0.8"/>
+      <text x="40" y="464" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" letter-spacing="0.18em">LEGEND</text>
+
+      <rect x="40" y="476" width="22" height="14" rx="2" fill="rgba(45,49,66,0.06)" stroke="rgba(45,49,66,0.30)" stroke-width="0.8"/>
+      <text x="51" y="486" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" font-weight="600">PK</text>
+      <text x="76" y="486" fill="#4f5d75" font-size="8.5" font-family="'Geist', sans-serif">Clave primaria</text>
+    </svg>
+  </div>
+</body>
+</html>
